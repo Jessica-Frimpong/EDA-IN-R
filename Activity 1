@@ -1,0 +1,11 @@
+POPULATON <- X10_2021PHC_CSV
+###count of observation###
+count<-dim(POPULATON)
+count
+missingdata<-colnames(POPULATON)[colSums(is.na(POPULATON))>0]
+missingdata
+variabletype<-sapply(POPULATON,class)
+variabletype
+male_female_by_region<-table(POPULATON$region,POPULATON$a12d)
+male_female_by_region
+male
